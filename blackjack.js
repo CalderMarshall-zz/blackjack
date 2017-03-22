@@ -114,7 +114,7 @@ $(function() {
           if (calculatePoints(playerhand) >= 21) {
                setTimeout(function () {
                     alert("Player Busts, Dealer Wins!");
-               },100);
+               },500);
 
           }
 
@@ -154,21 +154,21 @@ $(function() {
           if (calculatePoints(dealerhand) > 21 ) {
                setTimeout(function () {
                     alert("Dealer Busts! Player Wins!");
-               },100);
+               },500);
 
           }
           // win checker
           if (calculatePoints(dealerhand) < calculatePoints(playerhand) && calculatePoints(dealerhand) >= 17) {
                setTimeout(function () {
                     alert("Player Wins!");
-               },100);
+               },500);
 
           }
           // win checker
           if (calculatePoints(playerhand) < calculatePoints(dealerhand) && calculatePoints(dealerhand) < 21) {
                setTimeout(function () {
                     alert("Dealer Wins!");
-               },100);
+               },500);
 
 
           }
@@ -176,7 +176,7 @@ $(function() {
           if (calculatePoints(playerhand) === calculatePoints(dealerhand)) {
                setTimeout(function () {
                     alert("Push!");
-               },100);
+               },500);
 
           }
 
