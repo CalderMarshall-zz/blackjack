@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+     <title>Blackjack</title>
+     <script src="jquery.js"></script>
+     <script src="blackjack.js"></script>
+     <style media="screen">
+     #table {
+          text-align: center;
+          background-color: rgb(25, 124, 20);
+          border: 3px solid rgb(82, 37, 12);
+     }
+          .hand {
+               background-color: rgb(146, 203, 51);
+               width: 80vw;
+               height: 150px;
+               margin-left: 8%;
+               text-align: left;
+          }
+          img {
+               height: 120px;
+               padding: 15px;
+          }
+     </style>
+</head>
+<body>
+     <div id="table">
+  <div id="messages"></div>
+  <label>Dealer: </label>
+  <label id="dealer-points" class="points"></label>
+
+  <div id="dealer-hand" class="hand">
+
+  </div>
+
+
+  <label>Player: </label>
+  <label id="player-points" class="points"></label>
+
+  <div id="player-hand" class="hand">
+  </div>
+
+
+  <div class="buttons">
+    <button id="deal-button">Deal</button>
+    <button id="hit-button">Hit</button>
+    <button id="stand-button">Stand</button>
+    <button>Play Again?</button>
+  </div>
+  <p>Play again button not currently functional.  Refresh page.</p>
+
+
+
+</div>
+</body>
+</html>
