@@ -1,8 +1,4 @@
-This is a simple blackjack game in javascript using jQuery. 
-Need to add:
-	restarting the game once it is over
-	hiding buttons based on conditions
-
-	encapsulate similar functions and statements
-	place the functions and statements outside of the document ready
-	call these functions and statements with jQuery in the doc ready
+Simple jQuery blackjack game.  The game is functional right now, and a new game can be dealt.
+There are a couple of things that need to be added:
+	Fix win or loss messages, often times more than one alert appears.
+	This game looks pretty bad, it could use some CSS.

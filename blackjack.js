@@ -56,38 +56,57 @@ $(function() {
      // card 1 dealer
      $('#deal-button').click(function( ) {
           // card 1 player
+
           var playercard = deck.pop();
           var cardurl3 = getCardImageUrl(playercard);
-          $("#player-hand").append('<img src = ' + cardurl3 + '>');
-          playerhand.push(playercard);
+          setTimeout(function(){
+               $("#player-hand").append('<img src = ' + cardurl3 + '>');
+               playerhand.push(playercard);
+          },300);
 
-          console.log("deck len" + deck.length);
-          console.log("playerhand: " + playerhand);
+
+          // console.log("deck len" + deck.length);
+          // console.log("playerhand: " + playerhand);
+
+
           // card 1 dealer
-          console.log(deck.length);
+          // console.log(deck.length);
           var dealercard = deck.pop();
           var cardurl1 = getCardImageUrl(dealercard);
-          $("#dealer-hand").append('<img src = ' + cardurl1 + '>');
-          dealerhand.push(dealercard);
-          console.log("deck len" + deck.length);
-          console.log("dealerhand: " + dealerhand);
+          setTimeout(function(){
+               $("#dealer-hand").append('<img src = ' + cardurl1 + '>');
+               dealerhand.push(dealercard);
+          },600);
+
+          // console.log("deck len" + deck.length);
+          // console.log("dealerhand: " + dealerhand);
 
           //  card 2 player
           playercard = deck.pop();
           var cardurl4 = getCardImageUrl(playercard);
-          $("#player-hand").append('<img src = ' + cardurl4 + '>');
-          playerhand.push(playercard);
-          console.log("deck len" + deck.length);
-          console.log("playerhand: " + playerhand);
+          setTimeout(function(){
+               $("#player-hand").append('<img src = ' + cardurl4 + '>');
+               playerhand.push(playercard);
+          },900);
+
+          // console.log("deck len" + deck.length);
+          // console.log("playerhand: " + playerhand);
 
 
           // card 2 dealer
           dealercard = deck.pop();
           var cardurl2 = getCardImageUrl(dealercard);
+          setTimeout(function(){
+
           $("#dealer-hand").append('<img src = ' + cardurl2 + '>');
           dealerhand.push(dealercard);
-          console.log("deck len" + deck.length);
-          console.log("dealerhand: " + dealerhand);
+     },1200);
+
+
+
+
+          // console.log("deck len" + deck.length);
+          // console.log("dealerhand: " + dealerhand);
           $("#dealer-points").html(calculatePoints(dealerhand));
           $("#player-points").html(calculatePoints(playerhand));
 
@@ -216,5 +235,18 @@ $(function() {
           return sum;
      }
 
+     // play again logic
+$("#reset").click(function(){
+     $("#deal-button").show();
+     var dealerhand = [];
+     var playerhand = [];
+$("#dealer-hand").empty();
+$("#player-hand").empty();
+$("#dealer-points").empty();
+$("#player-points").empty();
+     });
+
+
 });
+
 //  If the player is dealt an ace, it is always played as 1
