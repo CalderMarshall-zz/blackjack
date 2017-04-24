@@ -1,61 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-     <meta charset="UTF-8">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-     <title>Blackjack</title>
-     <script src="jquery.js"></script>
-     <script src="blackjack.js"></script>
-     <style media="screen">
-     body {
-          background-color: rgb(169, 215, 172);
-     }
-     #table {
-          text-align: center;
-          background-color: rgb(25, 124, 20);
-          border: 3px solid rgb(82, 37, 12);
-     }
-          .hand {
-               background-color: rgb(146, 203, 51);
-               width: 80vw;
-               height: 150px;
-               margin-left: 8%;
-               text-align: left;
-          }
-          img {
-               height: 120px;
-               padding: 15px;
-          }
-     </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Blackjack</title>
+    <script src="jquery.js"></script>
+    <script src="blackjack.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz" rel="stylesheet">
+    <style media="screen">
+        body {
+            background-color:rgb(62, 42, 7);
+        }
+
+        #table {
+            text-align: left;
+            background-color: rgb(25, 124, 20);
+            border: 10px solid rgb(143, 44, 13);
+        }
+
+        #table .name_label {
+            padding-left: 5%;
+            font-family: 'Lobster', cursive;
+            font-size: 200%;
+        }
+
+        #table .buttons {
+            text-align: center;
+        }
+
+        .game_button {
+             width: 20%;
+             height: 8vh;
+             border-radius: 5%;
+             color: gold;
+             background-color: black;
+             border: 10px solid black;
+             font-family: 'Yanone Kaffeesatz', sans-serif;
+             font-size: 150%;
+             padding: inherit;
+        }
+        .points{
+             padding-left: 5%;
+             font-family: 'Lobster', cursive;
+             font-size: 175%;
+        }
+
+        .hand {
+            width: 80vw;
+            height: 150px;
+            margin-left: 8%;
+            text-align: left;
+        }
+
+        img {
+            height: 120px;
+            padding: 15px;
+        }
+    </style>
 </head>
+
 <body>
-     <div id="table">
-  <div id="messages"></div>
-  <label>Dealer: </label>
-  <label id="dealer-points" class="points"></label>
+    <div id="table">
+        <div id="messages"></div>
+        <label class="name_label">Dealer</label>
+        <label id="dealer-points" class="points"></label>
 
-  <div id="dealer-hand" class="hand">
+        <div id="dealer-hand" class="hand">
 
-  </div>
-
-
-  <label>Player: </label>
-  <label id="player-points" class="points"></label>
-
-  <div id="player-hand" class="hand">
-  </div>
+        </div>
 
 
-  <div class="buttons">
-    <button id="deal-button">Deal</button>
-    <button id="hit-button">Hit</button>
-    <button id="stand-button">Stand</button>
-    <button id="reset">Play Again?</button>
-  </div>
+        <label class="name_label">Player</label>
+        <label id="player-points" class="points"></label>
+
+        <div id="player-hand" class="hand">
+        </div>
+
+
+        <div class="buttons">
+            <button class="game_button" id="deal-button">Deal</button>
+            <button class="game_button" id="hit-button">Hit</button>
+            <button class="game_button" id="stand-button">Stand</button>
+            <button class="game_button" id="reset">Play Again?</button>
+        </div>
 
 
 
-</div>
+    </div>
 </body>
+
 </html>

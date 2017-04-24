@@ -62,6 +62,8 @@ $(function() {
           setTimeout(function(){
                $("#player-hand").append('<img src = ' + cardurl3 + '>');
                playerhand.push(playercard);
+               $("#player-points").html(calculatePoints(playerhand));
+
           },300);
 
 
@@ -76,6 +78,8 @@ $(function() {
           setTimeout(function(){
                $("#dealer-hand").append('<img src = ' + cardurl1 + '>');
                dealerhand.push(dealercard);
+               $("#dealer-points").html(calculatePoints(dealerhand));
+
           },600);
 
           // console.log("deck len" + deck.length);
@@ -87,6 +91,8 @@ $(function() {
           setTimeout(function(){
                $("#player-hand").append('<img src = ' + cardurl4 + '>');
                playerhand.push(playercard);
+               $("#player-points").html(calculatePoints(playerhand));
+
           },900);
 
           // console.log("deck len" + deck.length);
@@ -126,8 +132,6 @@ $(function() {
           console.log("deck len" + deck.length);
           console.log("deck:" + deck);
           console.log("playerhand: " + playerhand);
-          $("#dealer-points").html(calculatePoints(dealerhand));
-          $("#player-points").html(calculatePoints(playerhand));
 
           // win checker
           if (calculatePoints(playerhand) >= 21) {
@@ -137,7 +141,8 @@ $(function() {
 
           }
 
-
+          $("#dealer-points").html(calculatePoints(dealerhand));
+          $("#player-points").html(calculatePoints(playerhand));
 
      });
      // To make it less repetitive
@@ -153,6 +158,8 @@ $(function() {
                dealerhand.push(dealercard);
                console.log("deck len" + deck.length);
                console.log("dealerhand: " + dealerhand);
+               $("#dealer-points").html(calculatePoints(dealerhand));
+               $("#player-points").html(calculatePoints(playerhand));
           }
           // dealing to dealer function
           function dealDealer() {
@@ -165,6 +172,7 @@ $(function() {
                     console.log("dealerhand: " + dealerhand);
 
                }
+               $("#dealer-points").html(calculatePoints(dealerhand));
           }
           // actually dealing to dealer
           dealDealer();
@@ -238,12 +246,13 @@ $(function() {
      // play again logic
 $("#reset").click(function(){
      $("#deal-button").show();
-     var dealerhand = [];
-     var playerhand = [];
+
 $("#dealer-hand").empty();
 $("#player-hand").empty();
 $("#dealer-points").empty();
 $("#player-points").empty();
+var dealerhand = [];
+var playerhand = [];
      });
 
 
